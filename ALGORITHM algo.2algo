@@ -1,0 +1,42 @@
+ALGORITHM algo.2
+VAR
+    sum : INTEGER :=0;
+    i,j,nb1,nb2 : INTEGER;
+    set1 : ARRAY_OF INTEGER[50];
+    set2 : ARRAY_OF INTEGER[50];
+    
+BEGIN
+    write ("donner la taille de set1");
+    read (nb1);
+    for i from 0 to nb-1 step1  do
+    read(set1[i]);
+    end_for
+
+
+    write ("donner la taille de set2");
+    read(nb2);
+    for i from 0 to nb-1 step1  do
+    read (set2[j]);
+    end_for 
+
+    for i from 0 to set1.lenght-1 step1 do
+    for j from 0 to set2.lenght-1 step1 do
+    if (set1[i]<>set1[j]) then
+    sum := sum + set1[i];
+    end_if
+    end_for
+    end_for
+
+
+    for j from 0 to set2.lenght-1 step1 do
+    for i from 0 to set1.lenght-1 step1 do
+    if (set2[j]<>set1[i]) then
+    sum := sum + set2[j]
+    end_if
+    end_for
+    end_for
+    
+    whrite("sum of all distinct elements : ",sum);
+    
+
+END

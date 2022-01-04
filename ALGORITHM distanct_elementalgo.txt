@@ -1,0 +1,29 @@
+ALGORITHM distanct_element
+VAR
+    set1 : ARRAY_OF ineteger[50];
+    set2 : ARRAY_OF integer [50];
+    sum : INTEGER:=0;
+    i,j,nb1,nb2 : INTEGER;
+BEGIN
+    write ("donner la taille de set1 :");
+    read(nb1);
+    for i from 0 to nb1-1 step 1 do
+    read(set1[i]);
+    END_for
+
+    write("donner la taille de set2 : ")
+    read(nb2);
+    for j from 0 to nb2-1 step 1 do
+    read(set2[j]);
+    END_for
+    for i from 0 to set1.lenght-1 step 1 do
+     for j from 0 to set2.lenght-1 step 1 do 
+     if (set1[i]=set2[j]) then
+     sum := sum + (set1[i]*2);
+     END_if
+     break;
+     END_for
+     END_for
+     write("sum of overlapping elements in two sets equals :" ,sum)
+
+END
